@@ -1,0 +1,30 @@
+{
+  "name": "inventionStories",
+  "version": "1.0.0",
+  "description": "My Remotion video",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.240",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.240",
+    "zod": "3.22.3",
+    "@remotion/tailwind": "4.0.240"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config": "4.0.240",
+    "prettier": "3.3.3",
+    "eslint": "8.56.0"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src --ext ts,tsx,js,jsx"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
