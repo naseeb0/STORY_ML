@@ -7,21 +7,34 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.240",
+    "@remotion/tailwind": "4.0.240",
+    "@types/tar": "^6.1.13",
+    "axios": "^1.7.9",
+    "microsoft-cognitiveservices-speech-sdk": "^1.42.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "remotion": "4.0.240",
-    "zod": "3.22.3",
-    "@remotion/tailwind": "4.0.240"
+    "tar": "^7.4.3",
+    "zod": "3.22.3"
   },
   "devDependencies": {
     "@remotion/eslint-config": "4.0.240",
+    "@types/node": "^22.10.2",
+    "@types/unzipper": "^0.10.10",
+    "eslint": "8.56.0",
     "prettier": "3.3.3",
-    "eslint": "8.56.0"
+    "ts-node": "^10.9.2",
+    "unzipper": "^0.12.3"
   },
   "scripts": {
-    "dev": "remotion studio",
-    "build": "remotion bundle",
+    "setup-whisper": "ts-node scripts/setupWhisper.ts",
+    "watch-captions": "ts-node scripts/generateCaptions.ts",
+    "start": "remotion studio",
+    "build": "remotion render NachosStory out/video.mp4",
     "upgrade": "remotion upgrade",
+    "test": "eslint src --ext ts,tsx,js,jsx && tsc",
+    "generate-audio": "ts-node scripts/generateAudio.ts",
+    "generate-captions": "ts-node scripts/generateCaptions.ts",
     "lint": "eslint src --ext ts,tsx,js,jsx"
   },
   "sideEffects": [
